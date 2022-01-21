@@ -1,0 +1,33 @@
+.container{
+    padding-top: 100px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.grid {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "dis dis dis dis"
+    "AC AC DEL div"
+    "seven eight nine mult"
+    "four five six minus"
+    "one two three plus"
+    "dot zero equal equal";
+}
+
+.grid > button{
+display: flex;
+justify-content:center;
+align-items:center;
+padding:20px 40px;
+background-color: rgba(0,0,0,.4);
+color:white;
+outline: none;
+border: radius 5px;
+border:1px solid ;
+cursor:pointer;
+font-size: 20px;
+}

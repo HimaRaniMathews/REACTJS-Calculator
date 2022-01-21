@@ -1,8 +1,9 @@
 import React from "react";
-
+import "./App.css";
 const App = () => {
   return (
     <div className="container">
+      <div className="grid">
       <div className="output">
         <div className="previousOutput">123*</div>
         <div clasName="nextOutput">123</div>
@@ -25,6 +26,7 @@ const App = () => {
       <button className="">.</button>
       <button className="">0</button>
       <button className="span-two">=</button>
+    </div>
     </div>
   );
 };
