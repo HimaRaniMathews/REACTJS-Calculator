@@ -8,11 +8,12 @@ const App = () => {
 
   const [answer, setAnswer] = useState(0);
   const calculate = () => {
+    // eslint-disable-next-line no-eval
     setAnswer(eval(expression));
   };
 
   const clear = () => {
-    setAnswer((prev) =>
+    setExpression((prev) =>
       prev
         .split("")
         .slice(0, prev.length - 1)
@@ -27,16 +28,23 @@ const App = () => {
 
   return (
     <div className="container">
+      
+
       <div className="grid">
         <div className="output">
-          <div className="previousOutput" >{expression}</div>
-          <div className="nextOutput" >{answer}</div>
+          <input
+            className="previousOutput"
+            value={expression}
+            placeholder="0"
+            disabled
+          />
+          <div className="total">{answer}</div>
         </div>
         <button onClick={allClear} className="inner-grid AC">
           AC
         </button>
-        <button onClick={clear} className="inner-grid ">
-          DEL
+        <button onClick={clear} className="inner-grid C">
+          c
         </button>
         <button onClick={() => display("/")} className="inner-grid ">
           ÷

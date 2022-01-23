@@ -1,8 +1,10 @@
 .container {
-  padding-top: 10px;
+  padding-top: 20px;
+  padding-bottom: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
 }
 
 .grid {
@@ -11,7 +13,7 @@
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas:
     "dis dis dis dis"
-    "AC AC DEL div"
+    "AC AC C div"
     "seven eight nine mult"
     "four five six minus"
     "one two three plus"
@@ -23,14 +25,20 @@
   justify-content: center;
   align-items: center;
   padding: 20px 40px;
-  margin: 5px;
+  margin: 2px;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   outline: none;
   border-radius: 15px;
   border: 1px solid;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 30px;
+}
+
+.inner-grid:hover{
+  border: 1px solid rgb(235, 160, 212);
+  background-color:rgb(209, 63, 209);
+  color: white;
 }
 .output {
   grid-area: dis;
@@ -40,14 +48,14 @@
   text-align: right;
   padding: 10px 20px;
 }
-.output .previousOutput {
+.output input {
   font-size: 20px;
   text-align: right;
-  height:20%;
   width:100%;
-  margin-bottom: 15px;
+  color: white;
+  background-color:rgba(0, 0, 0, 0.1);
 }
-.output .nextOutput {
+.output .total{
   font-size: 30px;
   color: yellow;
   text-align: right;
@@ -55,6 +63,12 @@
   height:20%;
   margin-bottom: 15px;
 }
+
+.C{
+  grid-area: C;
+  background-color: rgba(48, 14, 51, 0.4);
+}
+
 .AC {
   grid-area: AC;
   background-color: rgba(48, 14, 51, 0.4);
